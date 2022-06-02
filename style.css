@@ -1,0 +1,413 @@
+@font-face {
+    font-family: "SanMarino";
+    src: url(source/fonts/San\ Marino\ Beach.otf);
+}
+
+:root {
+    --primary-color: #DAD378;
+    --secondary-color: white;
+    --terciary-color: #8DD9C2;
+    --quaternary-color: #4B5FA6;
+    --shadow-color: #BFBA69;
+    --soft-green: #7BA64B;
+    --hard-green: #457311;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 120rem;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header h1 {
+    font-family: SanMarino;
+    font-size: 3.7rem;
+    color: black;
+    letter-spacing: 0.4rem;
+}
+
+header h1 a{
+    color: black;
+}
+
+.user-options i {
+    cursor: pointer;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.user-options i:hover {
+    transform: scale(1.1);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.search{
+    border-radius: 0 2rem 2rem 0;
+    min-height: 2.8rem;
+    border-color: white;
+    border-style: solid;
+    width: 95%;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-search{
+    background-color: black;
+    color: white;
+    border: none;
+    width: 5%;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.search-complete{
+    width: 55%;
+    background-color: black;
+    border-radius: 2rem;
+}
+
+.menu-item{
+    display: inherit;
+}
+
+header .flex-column ul a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+header .flex-column ul a:hover{
+    color: #4B5FA6;
+}
+
+.menu{
+    padding: 1rem;
+    padding-bottom: 4rem;
+    position: relative;
+}
+
+.male{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 5rem;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 0;
+    transition: linear 0.4s all;
+    display: flex;
+    flex-direction:row
+}
+
+.female{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 5rem;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 0;
+    transition: linear 0.4s all;
+    display: flex;
+    flex-direction:row
+}
+
+.t-shirt{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 5rem;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 0;
+    transition: linear 0.4s all;
+    display: flex;
+    flex-direction:row
+}
+
+.coat{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 5rem;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 0;
+    transition: linear 0.4s all;
+    display: flex;
+    flex-direction:row
+}
+
+.trouser{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 5rem;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 0;
+    transition: linear 0.4s all;
+    display: flex;
+    flex-direction:row
+}
+
+.shoe{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 5rem;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 0;
+    transition: linear 0.4s all;
+    display: flex;
+    flex-direction:row
+}
+
+.hat{
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    top: 5rem;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: 0;
+    transition: linear 0.4s all;
+    display: flex;
+    flex-direction:row
+}
+
+header .flex-column ul .suboption a{
+    color: var(--primary-color);
+}
+
+.menu-item-male:hover~.male{
+    width: 100%;
+}
+
+.menu-item-female:hover~.female{
+    width: 100%;
+}
+
+.menu-item-tshirt:hover~.t-shirt{
+    width: 100%;
+}
+
+.menu-item-coat:hover~.coat{
+    width: 100%;
+}
+
+.menu-item-trouser:hover~.trouser{
+    width: 100%;
+}
+
+.menu-item-shoe:hover~.shoe{
+    width: 100%;
+}
+
+.menu-item-hat:hover~.hat{
+    width: 100%;
+}
+
+@media only screen and (max-width: 800px){
+    .flex-row{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-complete{
+        width: 90%;
+    }
+    .search{
+        width: 80%;
+    }
+    .btn-search{
+        width: 20%;
+    }
+    .user-options{
+        padding-top: 2rem;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .menu{
+        padding: 0;
+    }
+    .menu-item-male{
+        text-align: center;
+    }
+    .menu-item-female{
+        text-align: center;
+    }
+    .menu-item-tshirt{
+        text-align: center;
+    }
+    .menu-item-coat{
+        text-align: center;
+    }
+    .menu-item-trouser{
+        text-align: center;
+    }
+    .menu-item-shoe{
+        text-align: center;
+    }
+    .menu-item-hat{
+        text-align: center;
+    }
+    .menu-item-male{
+        text-align: center;
+    }
+    .male{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0rem;
+        text-align: center;
+        background-color: black;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        width: 0;
+        transition: linear 0.4s all;
+        display: flex;
+        flex-direction:column;
+    }
+    .female{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0rem;
+        text-align: center;
+        background-color: black;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        width: 0;
+        transition: linear 0.4s all;
+        display: flex;
+        flex-direction:column;
+    }
+    .t-shirt{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0rem;
+        text-align: center;
+        background-color: black;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        width: 0;
+        transition: linear 0.4s all;
+        display: flex;
+        flex-direction:column;
+    }
+    .coat{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0rem;
+        text-align: center;
+        background-color: black;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        width: 0;
+        transition: linear 0.4s all;
+        display: flex;
+        flex-direction:column;
+    }
+    .trouser{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0rem;
+        text-align: center;
+        background-color: black;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        width: 0;
+        transition: linear 0.4s all;
+        display: flex;
+        flex-direction:column;
+    }
+    .shoe{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0rem;
+        text-align: center;
+        background-color: black;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        width: 0;
+        transition: linear 0.4s all;
+        display: flex;
+        flex-direction:column;
+    }
+    .hat{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        top: 0rem;
+        text-align: center;
+        background-color: black;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        width: 0;
+        transition: linear 0.4s all;
+        display: flex;
+        flex-direction:column;
+    }
+}

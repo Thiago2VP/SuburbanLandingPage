@@ -31,6 +31,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 header h1 {
@@ -256,6 +257,124 @@ header .flex-column ul .suboption a{
     width: 100%;
 }
 
+.banner{
+    position: relative;
+}
+
+.banner-text{
+    position: absolute;
+    top: 14rem;
+    left: 20rem;
+    align-items: center;
+}
+
+.banner-text h1{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 4rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.banner-text div{
+    margin: 0;
+    padding:1rem 9rem 1rem 9rem;
+    background-color: var(--quaternary-color);
+    border-radius: 0.5rem;
+}
+
+.banner-text p{
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.banner-text a{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem 6rem 1rem 6rem;
+    font-size: 1.7rem;
+    border-radius: 0.7rem;
+    border-style: solid;
+    border-color: black;
+    font-weight: bold;
+    transition: linear 0.4s all;
+}
+
+.banner-text a:hover{
+    background: var(--primary-color) radial-gradient(circle, transparent 1%, var(--primary-color) 1%) center/15000%;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    transition: linear 0.4s all;
+}
+
+.banner-text a:active{
+    background-color: black;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+@keyframes carroussel {
+    0% {margin-left: 3%;}
+    50% {margin-left: -10%;}
+    100% {margin-left: 3%;}
+}
+
+.tags{
+    min-height: 50vh;
+    animation: carroussel 5s linear 0s infinite;
+}
+
+.tags a img{
+    transition: linear 0.4s all;
+}
+
+.tags a img:hover{
+    transform: scale(0.9);
+    transition: linear 0.4s all;
+}
+
+.body-content{
+    width: 100%;
+    position: relative;
+    margin: 0;
+    align-items: flex-start;
+}
+
+.body-content h1{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-style: italic;
+    padding-right: 1rem;
+    font-size: 2.8rem;
+    text-align: left;
+}
+
+.body-content h1::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    background-color: black;
+    top: 3.9rem;
+    left: 16rem;
+}
+
+@media only screen and (max-width: 950px){
+    @keyframes carroussel {
+        0% {margin-left: 3%;}
+        50% {margin-left: -60%;}
+        100% {margin-left: 3%;}
+    }
+    .tags{
+        min-height: 20vh;
+        animation: carroussel 8s linear 0s infinite;
+    }
+}
+
 @media only screen and (max-width: 800px){
     .flex-row{
         flex-direction: column;
@@ -409,5 +528,66 @@ header .flex-column ul .suboption a{
         transition: linear 0.4s all;
         display: flex;
         flex-direction:column;
+    }
+    .tags{
+        animation: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 3rem auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .banner{
+        margin-left: -12rem;
+    }
+    .banner-text{
+        left: 7rem;
+    }
+}
+
+
+@media only screen and (max-width: 540px){
+    .banner-text{
+        left: 11rem;
+    }
+    .tags{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    .banner-text{
+        left: 5.5rem;
+    }
+}
+
+
+@media only screen and (max-width: 414px){
+    .banner-text{
+        left: 4.5rem;
+    }
+}
+
+
+@media only screen and (max-width: 393px){
+    .banner-text{
+        left: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .banner-text{
+        left: 1rem;
+        width: 95vw;
+    }
+    .banner-text div{
+        padding:1rem;
+    }
+    .banner-text a{
+        padding:1rem;
+    }
+    .tags{
+        grid-template-columns: 1fr;
     }
 }

@@ -105,6 +105,7 @@ header .flex-column ul a{
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
+    font-weight: bold;
     width: 100%;
     text-align: center;
     margin: auto;
@@ -353,7 +354,7 @@ header .flex-column ul .suboption a{
     text-align: left;
 }
 
-.body-content h1::after{
+.right-line1 h1::after{
     position: absolute;
     content: "";
     width: 100%;
@@ -361,6 +362,349 @@ header .flex-column ul .suboption a{
     background-color: black;
     top: 3.9rem;
     left: 16rem;
+}
+
+.right-line2 h1::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.2rem;
+    background-color: black;
+    top: 3.9rem;
+    left: 29rem;
+}
+
+.cards-grid-big{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.card-big{
+    max-width: 95%;
+    min-height: 34rem;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(90deg, rgba(218,211,120,1) 26%, rgba(184,179,102,1) 69%);
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.card-big:hover{
+    box-shadow: 0.1rem 0.1rem 1.5rem black;
+}
+
+.card-big img{
+    width: 105%;
+    height: 105%;
+    border-radius: 0.5rem;
+}
+
+.card-big img:hover{
+    transform: scale(1.1) rotate(5deg);
+    transition: linear 0.4s all;
+}
+
+.card-big h2{
+    text-align: center;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.card-big p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.card-big a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: var(--quaternary-color);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 1rem 0 0;
+}
+
+@keyframes a-color {
+    0% {background-color: var(--quaternary-color);}
+    50% {background-color: black;}
+    100% {background-color: var(--quaternary-color);}
+}
+
+.card-big a:hover{
+    animation: a-color 5s linear 0s infinite;
+}
+
+.cards-galery{
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+}
+
+.bgp-1{
+    background: black;
+    background-image: url(source/media/apresentation-1.jpg);
+}
+
+.bgp-2{
+    background: black;
+    background-image: url(source/media/apresentation-2.jpg);
+}
+
+.card-apresentation{
+    width: 56.2vh;
+    margin: auto;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.card-apresentation:hover{
+    box-shadow: 0.1rem 0.1rem 1.5rem black;
+}
+
+.card-apresentation h1{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0.3rem 0.3rem 0.5rem black;
+    margin-bottom: 0.3rem;
+}
+
+.card-apresentation a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    background-color: black;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.card-apresentation a:hover{
+    background: white radial-gradient(circle, transparent 1%, black 1%) center/15000%;
+    color: black;
+}
+
+.card-apresentation a:active{
+    background-color: black;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.grid-small-cards{
+    width: 60%;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+}
+
+.small-card{
+    position: relative;
+    height: 25rem;
+    width: 15rem;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: black;
+    border-top: 0.1rem;
+    border-left: 0.1rem;
+    margin-top: 2rem;
+}
+
+.small-card:hover{
+    box-shadow: 0.1rem 0.1rem 1.5rem black;
+}
+
+.small-card img{
+    height: 50%;
+}
+
+.small-card a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+.small-card h2{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 19%;
+}
+
+.small-card h3{
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    width: 100%;
+    background-color: var(--terciary-color);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.small-card h4{
+    margin-top: 0;
+    margin-bottom: 0.6;
+    padding-top: 0.3rem;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100%;
+    background-color: var(--terciary-color);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.offer{
+    font-family: 'Inter', sans-serif;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.3rem;
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.favorite{
+    display: none;
+}
+
+.fl1::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f1:checked~.fl1::after{
+    color: red;
+}
+
+.fl2::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f2:checked~.fl2::after{
+    color: red;
+}
+.fl3::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f3:checked~.fl3::after{
+    color: red;
+}
+.fl4::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f4:checked~.fl4::after{
+    color: red;
+}
+
+.fl5::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f5:checked~.fl5::after{
+    color: red;
+}
+
+.fl6::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f6:checked~.fl6::after{
+    color: red;
+}
+
+.fl7::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f7:checked~.fl7::after{
+    color: red;
+}
+
+.fl8::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f8:checked~.fl8::after{
+    color: red;
+}
+.fl9::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f9:checked~.fl9::after{
+    color: red;
+}
+.fl10::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f10:checked~.fl10::after{
+    color: red;
+}
+
+.fl11::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f11:checked~.fl11::after{
+    color: red;
+}
+
+.fl12::after{
+    content: "❤";
+    color: black;
+    font-size: 2rem;
+}
+
+.f12:checked~.fl12::after{
+    color: red;
 }
 
 @media only screen and (max-width: 950px){
@@ -372,6 +716,30 @@ header .flex-column ul .suboption a{
     .tags{
         min-height: 20vh;
         animation: carroussel 8s linear 0s infinite;
+        margin-bottom: 3rem;
+    }
+    .card-apresentation{
+        display: none;
+    }
+    .cards-galery{
+        display: flex;
+        padding-top: 3rem;
+    }
+    .grid-small-cards{
+        margin: auto;
+        width: 100%;
+    }
+    .ch-back1{
+        background: linear-gradient(90deg, rgba(218,211,120,1) 26%, rgba(184,179,102,1) 69%);
+    }
+    .ch-back2{
+        background: linear-gradient(90deg, rgba(75,95,166,1) 26%, rgba(64,85,162,1) 69%);
+    }
+    .small-card{
+        background-color: white;
+    }
+    .small-card{
+        margin: auto auto 2rem auto;
     }
 }
 
@@ -535,6 +903,17 @@ header .flex-column ul .suboption a{
         grid-template-columns: 1fr 1fr 1fr;
         margin: 3rem auto auto auto;
     }
+    .cards-grid-big{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-big{
+        margin: 1rem;
+    }
+    .ch-back2{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 650px){
@@ -544,8 +923,13 @@ header .flex-column ul .suboption a{
     .banner-text{
         left: 7rem;
     }
+    .cards-grid-big{
+        grid-template-columns: 1fr;
+    }
+    .grid-small-cards{
+        grid-template-columns: 1fr 1fr;
+    }
 }
-
 
 @media only screen and (max-width: 540px){
     .banner-text{
@@ -559,6 +943,9 @@ header .flex-column ul .suboption a{
 @media only screen and (max-width: 430px){
     .banner-text{
         left: 5.5rem;
+    }
+    .grid-small-cards{
+        grid-template-columns: 1fr;
     }
 }
 

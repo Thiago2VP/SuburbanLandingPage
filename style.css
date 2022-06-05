@@ -115,6 +115,10 @@ header .flex-column ul a:hover{
     color: #4B5FA6;
 }
 
+header .flex-column ul li{
+    list-style-type: none;
+}
+
 .menu{
     padding: 1rem;
     padding-bottom: 4rem;
@@ -707,6 +711,70 @@ header .flex-column ul .suboption a{
     color: red;
 }
 
+footer{
+    background-color: var(--primary-color);
+}
+
+footer h1{
+    font-family: SanMarino;
+    font-size: 3rem;
+    color: black;
+    letter-spacing: 0.4rem;
+    margin: 3rem 4rem 3rem 4rem;
+}
+
+footer h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer a{
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    font-size: 1.3rem;
+    padding: 0.4rem;
+}
+
+footer i{
+    margin: auto 1.5rem auto 1.5rem;
+    cursor: pointer;
+}
+
+footer i:hover{
+    transform: scale(1.1);
+}
+
+footer p{
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer .container div{
+    display: flex;
+}
+
+.footer-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 120rem;
+}
+
+.footer-1 div{
+    margin: 0 1.5rem 0 1.5rem;
+    justify-content: space-evenly;
+}
+
+.footer-1 a:hover{
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 950px){
     @keyframes carroussel {
         0% {margin-left: 3%;}
@@ -929,6 +997,9 @@ header .flex-column ul .suboption a{
     .grid-small-cards{
         grid-template-columns: 1fr 1fr;
     }
+    .footer-1{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 540px){
@@ -938,6 +1009,13 @@ header .flex-column ul .suboption a{
     .tags{
         grid-template-columns: 1fr 1fr;
     }
+    .social-media{
+        flex-direction: column;
+        padding-bottom: 3rem;
+    }
+    .social-media div{
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 430px){
@@ -946,6 +1024,9 @@ header .flex-column ul .suboption a{
     }
     .grid-small-cards{
         grid-template-columns: 1fr;
+    }
+    .footer-1{
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -976,5 +1057,16 @@ header .flex-column ul .suboption a{
     }
     .tags{
         grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .footer-1{
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+    .footer-1 div{
+        margin: auto;
+        align-items: center;
     }
 }
